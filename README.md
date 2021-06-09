@@ -1,5 +1,11 @@
 # Linux命令
 
+- 查看运行内存占用最多的10条
+
+``` shell
+[root@iZwz995sygwab04zwh0glhZ local]# ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
+```
+
 - 查看指定端口占用情况并将其杀掉
 
 ``` shell
