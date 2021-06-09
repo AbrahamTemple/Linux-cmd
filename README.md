@@ -6,6 +6,12 @@
 [root@iZwz995sygwab04zwh0glhZ local]# ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
 ```
 
+- 通过pid查端口
+
+``` shell
+[root@iZwz995sygwab04zwh0glhZ local]# netstat -nap | grep 29141
+```
+
 - 查看指定端口占用情况并将其杀掉
 
 ``` shell
