@@ -18,6 +18,14 @@ overlay          40G   40G     0 100% /var/lib/docker/overlay2/fb1221a558566bb54
 [root@hecs-x-medium-2-linux-20210511093644 overlay2]# rm -fr *
 ```
 
+``` shell
+[root@hecs-x-medium-2-linux-20210511093644 dev]# find / -type f -size +10G
+/proc/kcore
+find: ‘/proc/10645/task/10645/fdinfo/6’: No such file or directory
+find: ‘/proc/10645/fdinfo/5’: No such file or directory
+/www/docker/olife-base/log.file
+```
+
 - 查看运行内存占用最多的10条
 
 ``` shell
