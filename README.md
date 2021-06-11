@@ -1,5 +1,23 @@
 # Linux命令
 
+- 查看磁盘内存占用最多的
+
+``` shell
+[root@hecs-x-medium-2-linux-20210511093644 docker]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        909M     0  909M   0% /dev
+tmpfs           919M   40K  919M   1% /dev/shm
+tmpfs           919M   68M  852M   8% /run
+tmpfs           919M     0  919M   0% /sys/fs/cgroup
+/dev/vda1        40G   40G     0 100% /
+tmpfs           184M     0  184M   0% /run/user/0
+overlay          40G   40G     0 100% /var/lib/docker/overlay2/8320a8c2f3d1fcd10c1221c9fe8f9c4e18494aaffea800937c3d9f4223edd79c/merged
+overlay          40G   40G     0 100% /var/lib/docker/overlay2/ad794b437d2fa7f25afc99d365cb2d06bfad1a18fac1b1d733273db6a16c4d25/merged
+overlay          40G   40G     0 100% /var/lib/docker/overlay2/c165d1c50cff77e4477b7b74de757152e77873959753d977aea1237d7e763fe8/merged
+overlay          40G   40G     0 100% /var/lib/docker/overlay2/fb1221a558566bb547fa19d060f6049b0c4a821555b69a8043f598f97379f2eb/merged
+[root@hecs-x-medium-2-linux-20210511093644 overlay2]# rm -fr *
+```
+
 - 查看运行内存占用最多的10条
 
 ``` shell
