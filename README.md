@@ -12,6 +12,13 @@
 [root@iZwz995sygwab04zwh0glhZ local]# netstat -nap | grep 29141
 ```
 
+- 通过pid查路径
+
+``` shell
+[root@iZwz995sygwab04zwh0glhZ docker]# pwdx 1293
+1293: /var/lib/rabbitmq
+```
+
 - 查看指定端口占用情况并将其杀掉
 
 ``` shell
