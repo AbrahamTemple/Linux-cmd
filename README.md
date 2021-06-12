@@ -98,3 +98,14 @@ success
 [root@hecs-x-medium-2-linux-20210511093644 bin]# firewall-cmd --query-port=8848/tcp
 yes
 ```
+
+- 查看倒数行日志
+
+``` shell
+[root@abraham-cloud ~]# cd /var/lib/docker/containers
+[root@abraham-cloud containers]# ls
+142ecd80909c547e52d3aca9417f2d908bcdf7dc2901b21cbdd7dbb435885664  5e30236afd7143019d59f96b610e0dced322d9fdb8d58595d93e88711973bc61
+23c1a625e12b3770fdb4a090e567357dfa70074fa749a48b15e9f7aba2f6f333  ef0880dd023427ad51cebcd1d26f76bad1f92a5a79345d7831c897766d1892b3
+305d3a9035877c578c66e9a9d5653d442654b7a5523cd503993f387726f1431a
+[root@abraham-cloud 305d3a9035877c578c66e9a9d5653d442654b7a5523cd503993f387726f1431a]# tail -n 200 305d3a9035877-json.log
+```
